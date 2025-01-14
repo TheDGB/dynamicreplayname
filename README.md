@@ -7,7 +7,9 @@ This is a **4FuN** plugins thats dynamically changes the name of the replay bot,
 Installation tutorial:
 
 rdescription.cfg > addons/sourcemod/configs
+
 dynamicbotname.smx > addons/sourcemod/plugins
+
 dbnc.sp > addons/sourcemod/scripting
 
 
