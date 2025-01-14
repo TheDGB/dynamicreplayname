@@ -28,6 +28,4 @@ Noob Way (Basic Installation):
 
 4 - Edit the plugin's CFG in the folder. > cfg/sourcemod/dnyamic_replay_name.cfg
 
-**5 - Enjoy the plugin!**
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# **5 - Enjoy the plugin!**
