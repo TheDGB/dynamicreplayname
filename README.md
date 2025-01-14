@@ -18,4 +18,4 @@ Noob Way (Basic Installation):
 
 2 - Check if the plugins are in the right folder.
 
-3 - Enjoy the plugin.
+3 - Enjoy the plugin!
