@@ -20,12 +20,12 @@ Edit the plugin's CFG in the folder > cfg/sourcemod/dnyamic_replay_name.cfg
 
 ## Noob Way (Basic Installation):
 
-1 - Drag and drop the zip file into the Source Mod file.
+- 1 - Drag and drop the zip file into the Source Mod file.
 
-2 - Check if the plugins are in the right folder.
+- 2 - Check if the plugins are in the right folder.
 
-3 - Execute your server with Replay Bot or Source TV Bot.
+- 3 - Execute your server with Replay Bot or Source TV Bot.
 
-4 - Edit the plugin's CFG in the folder. > cfg/sourcemod/dnyamic_replay_name.cfg
+- 4 - Edit the plugin's CFG in the folder. > cfg/sourcemod/dnyamic_replay_name.cfg
 
-# **5 - Enjoy the plugin!**
+# - **5 - Enjoy the plugin!**
