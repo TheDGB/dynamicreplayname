@@ -5,20 +5,20 @@ This is a **4FuN** plugins thats dynamically changes the name of the replay bot,
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Installation tutorial:
+## Installation tutorial:
 
-rdescription.cfg > addons/sourcemod/configs
+- rdescription.cfg > addons/sourcemod/configs
 
-dynamicbotname.smx > addons/sourcemod/plugins
+- dynamicbotname.smx > addons/sourcemod/plugins
 
-dbnc.sp > addons/sourcemod/scripting
+- dbnc.sp > addons/sourcemod/scripting
 
 
 Edit the plugin's CFG in the folder > cfg/sourcemod/dnyamic_replay_name.cfg
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Noob Way (Basic Installation):
+## Noob Way (Basic Installation):
 
 1 - Drag and drop the zip file into the Source Mod file.
 
