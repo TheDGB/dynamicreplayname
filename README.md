@@ -10,6 +10,8 @@ rdescription.cfg > addons/sourcemod/configs
 dynamicbotname.smx > addons/sourcemod/plugins
 dbnc.sp > addons/sourcemod/scripting
 
+/////////////////////////////////////////////////////////////////
+
 Noob Way (Basic Installation):
 
 1 - Drag and drop the zip file into the Source Mod file.
