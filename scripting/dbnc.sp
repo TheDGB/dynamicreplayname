@@ -14,6 +14,9 @@ ConVar sm_rtime;
 ConVar sm_rday;
 ConVar sm_rmonth;
 ConVar sm_rweek;
+
+/////////////////////////////////////////////// Outro
+ConVar sm_rblockbroadcast;
 ConVar sm_drn_enabled;
 
 /////////////////////////////////////////////// Source TV Settings
@@ -59,6 +62,7 @@ public void OnPluginStart()
     sm_rday = CreateConVar("sm_rday", "1", "Add day to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
     sm_rmonth = CreateConVar("sm_rmonth", "1", "Add month to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
     sm_rweek = CreateConVar("sm_rweek", "0", "Add day of the week to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
+	sm_rblockbroadcast = CreateConVar("sm_rblockbroadcast", "1", "Block the broadcast name change for the bot in the chat", FCVAR_NONE);
     sm_drn_enabled = CreateConVar("sm_drn_enabled", "1", "Enable Dynamic Replay Name (1 for yes, 0 for no)", FCVAR_NONE);
 	
 	
@@ -78,6 +82,7 @@ public void OnPluginStart()
     CreateTimer(5.0, UpdateReplayBotName, _, TIMER_REPEAT);
 	CreateTimer(5.0, UpdateSourceTVBotName, _, TIMER_REPEAT);
     StartDescriptionTimer();
+    HookUserMessage(GetUserMessageId("SayText2"), SayText2, true);
 	AutoExecConfig(true, "dnyamic_replay_name"); // Check your Source Mod CFG File -7-
 }
 
@@ -124,7 +129,7 @@ void LoadDescriptions()
         {
             TrimString(line);
 
-            if (line[0] != '\0' && line[0] != '/' && !(line[0] == '/' && line[1] == '/')) // Literalmente ignora linhas ou exemplos com // como esse.
+            if (line[0] != '\0' && line[0] != '/' && !(line[0] == '/' && line[1] == '/')) // Literally ignores lines or examples with // like this.
             {
                 strcopy(g_Descriptions[g_DescriptionCount], sizeof(g_Descriptions[]), line);
                 g_DescriptionCount++;
@@ -179,15 +184,15 @@ public Action UpdateReplayBotName(Handle timer)
             continue;
         }
 
-        if (IsClientReplay(client)) // Apenas para Replay Bot
+        if (IsClientReplay(client))
         {
             char baseName[32];
             GetConVarString(sm_rname, baseName, sizeof(baseName));
 
             char newName[256];
             strcopy(newName, sizeof(newName), baseName);
-
-            // Adicionar detalhes ao nome do Replay Bot
+			
+            // Add details to Replay Bot name
             if (sm_rtime.BoolValue)
             {
                 char timeStr[32];
@@ -246,7 +251,7 @@ public Action UpdateSourceTVBotName(Handle timer)
             continue;
         }
 
-        if (IsClientSourceTV(client)) // Apenas para SourceTV Bot
+        if (IsClientSourceTV(client))
         {
             char baseName[32];
             GetConVarString(sm_stvname, baseName, sizeof(baseName));
@@ -254,7 +259,7 @@ public Action UpdateSourceTVBotName(Handle timer)
             char newName[256];
             strcopy(newName, sizeof(newName), baseName);
 
-            // Adicionar detalhes ao nome do SourceTV Bot
+            // Add details to SourceTV Bot name
             if (sm_stvtime.BoolValue)
             {
                 char timeStr[32];
@@ -294,6 +299,40 @@ public Action UpdateSourceTVBotName(Handle timer)
         }
     }
 
+    return Plugin_Continue;
+}
+
+////////////////////////////////////////////// Block name change broadcast
+
+public Action:SayText2(UserMsg:msg_id, Handle:bf, players[], playersNum, bool:reliable, bool:init)
+{
+    if (sm_rblockbroadcast.BoolValue)
+    {
+        new String:buffer[25];
+
+        if (GetUserMessageType() == UM_Protobuf) // Para CSGO
+        {
+            PbReadString(bf, "msg_name", buffer, sizeof(buffer));
+
+            // If the message is a name change, BLOCK IT!
+            if (StrEqual(buffer, "#TF_Name_Change"))
+            {
+                return Plugin_Handled;
+            }
+        }
+        else
+        {
+            BfReadChar(bf);
+            BfReadChar(bf);
+            BfReadString(bf, buffer, sizeof(buffer));
+			
+            if (StrEqual(buffer, "#TF_Name_Change"))
+            {
+                return Plugin_Handled;
+            }
+        }
+    }
+	
     return Plugin_Continue;
 }
 
