@@ -42,7 +42,7 @@ public Plugin:myinfo =
     name = "Dynamic Replay Name",
     author = "DGB",
     description = "Dynamically changes the name of the replay bot in TF2",
-    version = "1.5",
+    version = "1.1.0",
     url = ""
 };
 
