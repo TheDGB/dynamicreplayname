@@ -310,7 +310,7 @@ public Action:SayText2(UserMsg:msg_id, Handle:bf, players[], playersNum, bool:re
     {
         new String:buffer[25];
 
-        if (GetUserMessageType() == UM_Protobuf) // Para CSGO
+        if (GetUserMessageType() == UM_Protobuf)
         {
             PbReadString(bf, "msg_name", buffer, sizeof(buffer));
 
