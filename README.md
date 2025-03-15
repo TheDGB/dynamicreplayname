@@ -34,7 +34,8 @@ Do you have a suggestion for the plugin? You can make a **pull request!**
 | `sm_stvmonth`             | `0`               | (Add month to SourceTV bot name, 1 for yes, 0 for no)                           |
 
 #### Dependencies.
-Non depedencies.
+Sourcemod 1.12+
+Non custom depedencies.
 
 #### Supported Games.
 - Half-Life 2 Deathmatch (Tested)
