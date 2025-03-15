@@ -52,15 +52,15 @@ public void OnPluginStart()
 {
 /////////////////////////////////////////////////// Replay (R) Commands
 
-    sm_rdescription = CreateConVar("sm_rdescription", "1", "Activate dynamic descriptions (1 for yes, 0 for no)", FCVAR_NONE);
-    sm_rdescriptiontime = CreateConVar("sm_rdescriptiontime", "10", "Time in minutes to change the description", FCVAR_NONE, true, 1.0);
-    sm_rdescription_random = CreateConVar("sm_rdescription_random", "0", "Activate random rotation of descriptions (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_rdescription = CreateConVar("sm_rdescription", "0", "Activate dynamic descriptions (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_rdescriptiontime = CreateConVar("sm_rdescriptiontime", "5", "Time in minutes to change the description", FCVAR_NONE, true, 1.0);
+    sm_rdescription_random = CreateConVar("sm_rdescription_random", "1", "Activate random rotation of descriptions (1 for yes, 0 for no)", FCVAR_NONE);
     HookConVarChange(sm_rdescription_random, OnDescriptionRandomChanged);
     HookConVarChange(sm_rdescriptiontime, OnDescriptionTimeChanged);
-    sm_rname = CreateConVar("sm_rname", "Example Replay", "A name for replay bot", FCVAR_NONE);
+    sm_rname = CreateConVar("sm_rname", "Replay", "A name for replay bot", FCVAR_NONE);
     sm_rtime = CreateConVar("sm_rtime", "1", "Add time to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
-    sm_rday = CreateConVar("sm_rday", "1", "Add day to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
-    sm_rmonth = CreateConVar("sm_rmonth", "1", "Add month to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_rday = CreateConVar("sm_rday", "0", "Add day to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_rmonth = CreateConVar("sm_rmonth", "0", "Add month to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
     sm_rweek = CreateConVar("sm_rweek", "0", "Add day of the week to replay bot name (1 for yes, 0 for no)", FCVAR_NONE);
 	sm_rblockbroadcast = CreateConVar("sm_rblockbroadcast", "1", "Block the broadcast name change for the bot in the chat", FCVAR_NONE);
     sm_drn_enabled = CreateConVar("sm_drn_enabled", "1", "Enable Dynamic Replay Name (1 for yes, 0 for no)", FCVAR_NONE);
@@ -69,11 +69,11 @@ public void OnPluginStart()
 	/////////////////////////////////////////////// Source TV (STV) Commands
 	
     sm_stvchanges = CreateConVar("sm_stvchanges", "1", "Enable SourceTV name change (1 for yes, 0 for no)", FCVAR_NONE);
-    sm_stvname = CreateConVar("sm_stvname", "Example Source TV", "A name for SourceTV bot", FCVAR_NONE);
-    sm_stvday = CreateConVar("sm_stvday", "1", "Add date to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_stvname = CreateConVar("sm_stvname", "Source TV", "A name for SourceTV bot", FCVAR_NONE);
+    sm_stvday = CreateConVar("sm_stvday", "0", "Add date to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
 	sm_stvweek = CreateConVar("sm_stvweek", "0", "Add a week to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
-    sm_stvdescription = CreateConVar("sm_stvdescription", "1", "Add description to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
-    sm_stvtime = CreateConVar("sm_stvtime", "0", "Add time to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_stvdescription = CreateConVar("sm_stvdescription", "0", "Add description to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
+    sm_stvtime = CreateConVar("sm_stvtime", "1", "Add time to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
 	sm_stvmonth = CreateConVar("sm_stvmonth", "0", "Add month to SourceTV bot name (1 for yes, 0 for no)", FCVAR_NONE);
 	
 	/////////////////////////////////////////////// Another Bonus Things
