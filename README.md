@@ -1,56 +1,47 @@
 # Dynamic Source TV/Replay Name
 This is a **4FuN** plugins thats dynamically changes the name of the replay bot, **enjoy!**
+Do you have a suggestion for the plugin? You can make a **pull request!**
 
-***(As Team Fortress 2 and some Valve games have name character limits, I recommend activating only 2 name settings or 3, depending on the size of the setting you are activating)***
+> ***(Warning: As Team Fortress 2 and some Valve games have name character limits, I recommend activating only 2 name settings or 3, depending on the size of the setting you are activating)***
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#### Replay and Geral Commands
 
-## Replay and Geral Commands
-- sm_drn_enabled (Enable Dynamic Replay Name, 1 for yes, 0 for no)
-- sm_rblockbroadcast (Block the broadcast name change for the bot in the chat)
+- | **ConVars**                | **Default Value** | **Description**                                                                 |
+|---------------------------|-------------------|---------------------------------------------------------------------------------|
+| `sm_drn_enabled`          | `1`               | (Enable Dynamic Replay Name, 1 for yes, 0 for no)                               |
+| `sm_rblockbroadcast`      | `1`               | (Block the broadcast name change for the bot in the chat)                       |
 
-- sm_rday (Add day to replay bot name, 1 for yes, 0 for no)
-- sm_rdescription (Activate dynamic descriptions, 1 for yes, 0 for no)
-- sm_rdescription_random (Activate random rotation of descriptions, 1 for yes, 0 for no)
-- sm_rdescriptiontime (Time in minutes to change the description)
-- sm_rmonth (Add month to replay bot name, 1 for yes, 0 for no)
-- sm_rname (A name for replay bot)
-- sm_rtime (Add time to replay bot name, 1 for yes, 0 for no)
-- sm_rweek (Add day of the week to replay bot name, 1 for yes, 0 for no)
+| `sm_rday`                 | `0`               | (Add day to replay bot name, 1 for yes, 0 for no)                               |
+| `sm_rdescription`         | `0`               | (Activate dynamic descriptions, 1 for yes, 0 for no)                            |
+| `sm_rdescription_random`  | `1`               | (Activate random rotation of descriptions, 1 for yes, 0 for no)                 |
+| `sm_rdescriptiontime`     | `5`               | (Time in minutes to change the description)                                     |
+| `sm_rmonth`               | `0`               | (Add month to replay bot name, 1 for yes, 0 for no)                             |
+| `sm_rname`                | `Replay`          | (A name for replay bot)                                                         |
+| `sm_rtime`                | `1`               | (Add time to replay bot name, 1 for yes, 0 for no)                              |
+| `sm_rweek`                | `0`               | (Add day of the week to replay bot name, 1 for yes, 0 for no)                   |
 
-## Source TV Commands
-- sm_stvchanges (Enable SourceTV name change, 1 for yes, 0 for no)
-  
-- sm_stvname (A name for SourceTV bot)
-- sm_stvday (Add date to SourceTV bot name, 1 for yes, 0 for no)
-- sm_stvweek (Add a week to SourceTV bot name, 1 for yes, 0 for no)
-- sm_stvdescription (Add description to SourceTV bot name, 1 for yes, 0 for no)
-- sm_stvtime (Add time to SourceTV bot name, 1 for yes, 0 for no)
-- sm_stvmonth (Add month to SourceTV bot name, 1 for yes, 0 for no)
+> "sm_rblockbroadcast" Blocks the name change chat broadcast for the BOT, this applies to the source tv bot too.
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#### Source TV Commands
 
-## Installation tutorial:
+- - | **ConVars**                | **Default Value** | **Description**                                                                 |
+|---------------------------|-------------------|---------------------------------------------------------------------------------|
+| `sm_stvchanges`           | `1`               | (Enable SourceTV name change, 1 for yes, 0 for no)                              |
 
-- rdescription.cfg > addons/sourcemod/configs
+| `sm_stvname`              | `SourceTV`        | (A name for SourceTV bot)                                                       |
+| `sm_stvday`               | `0`               | (Add date to SourceTV bot name, 1 for yes, 0 for no)                            |
+| `sm_stvweek`              | `0`               | (Add a week to SourceTV bot name, 1 for yes, 0 for no)                          |
+| `sm_stvdescription`       | `0`               | (Add description to SourceTV bot name, 1 for yes, 0 for no)                     |
+| `sm_stvtime`              | `1`               | (Add time to SourceTV bot name, 1 for yes, 0 for no)                            |
+| `sm_stvmonth`             | `0`               | (Add month to SourceTV bot name, 1 for yes, 0 for no)                           |
 
-- dynamicbotname.smx > addons/sourcemod/plugins
+#### Dependencies.
+Non depedencies.
 
-- dbnc.sp > addons/sourcemod/scripting
+#### Supported Games.
+- Half-Life 2 Deathmatch (Tested)
+- Team Fortress 2 (Tested)
+- Counter-Strike Source (Not tested yet)
+- Day of Defeat: Source (Not tested yet)
 
-
-Edit the plugin's CFG in the folder > cfg/sourcemod/dnyamic_replay_name.cfg
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-## Noob Way (Basic Installation):
-
-- 1 - Drag and drop the zip file into the Source Mod file.
-
-- 2 - Check if the plugins are in the right folder.
-
-- 3 - Execute your server with Replay Bot or Source TV Bot.
-
-- 4 - Edit the plugin's CFG in the folder. > cfg/sourcemod/dnyamic_replay_name.cfg
-
-# **5 - Enjoy the plugin!**
+# **Enjoy the plugin!**
