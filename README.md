@@ -33,6 +33,8 @@ Do you have a suggestion for the plugin? You can make a **pull request!**
 | `sm_stvtime`              | `1`               | (Add time to SourceTV bot name, 1 for yes, 0 for no)                            |
 | `sm_stvmonth`             | `0`               | (Add month to SourceTV bot name, 1 for yes, 0 for no)                           |
 
+> We will add more STV commands later.
+
 #### Dependencies.
 - Sourcemod 1.12+
 - Non custom depedencies.
