@@ -6,7 +6,7 @@ Do you have a suggestion for the plugin? You can make a **pull request!**
 
 #### Replay and Geral Commands
 
-- | **ConVars**                | **Default Value** | **Description**                                                                 |
+| **ConVars**               | **Default Value** | **Description**                                                                 |
 |---------------------------|-------------------|---------------------------------------------------------------------------------|
 | `sm_drn_enabled`          | `1`               | (Enable Dynamic Replay Name, 1 for yes, 0 for no)                               |
 | `sm_rblockbroadcast`      | `1`               | (Block the broadcast name change for the bot in the chat)                       |
