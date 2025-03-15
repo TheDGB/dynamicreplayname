@@ -10,7 +10,6 @@ Do you have a suggestion for the plugin? You can make a **pull request!**
 |---------------------------|-------------------|---------------------------------------------------------------------------------|
 | `sm_drn_enabled`          | `1`               | (Enable Dynamic Replay Name, 1 for yes, 0 for no)                               |
 | `sm_rblockbroadcast`      | `1`               | (Block the broadcast name change for the bot in the chat)                       |
-
 | `sm_rday`                 | `0`               | (Add day to replay bot name, 1 for yes, 0 for no)                               |
 | `sm_rdescription`         | `0`               | (Activate dynamic descriptions, 1 for yes, 0 for no)                            |
 | `sm_rdescription_random`  | `1`               | (Activate random rotation of descriptions, 1 for yes, 0 for no)                 |
@@ -24,10 +23,9 @@ Do you have a suggestion for the plugin? You can make a **pull request!**
 
 #### Source TV Commands
 
-- - | **ConVars**                | **Default Value** | **Description**                                                                 |
+| **ConVars**               | **Default Value** | **Description**                                                                 |
 |---------------------------|-------------------|---------------------------------------------------------------------------------|
 | `sm_stvchanges`           | `1`               | (Enable SourceTV name change, 1 for yes, 0 for no)                              |
-
 | `sm_stvname`              | `SourceTV`        | (A name for SourceTV bot)                                                       |
 | `sm_stvday`               | `0`               | (Add date to SourceTV bot name, 1 for yes, 0 for no)                            |
 | `sm_stvweek`              | `0`               | (Add a week to SourceTV bot name, 1 for yes, 0 for no)                          |
