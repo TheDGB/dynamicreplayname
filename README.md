@@ -47,3 +47,5 @@ Do you have a suggestion for the plugin? You can make a **pull request!**
 - Day of Defeat: Source (Not tested yet)
 
 # **Enjoy the plugin!**
+
+[![](https://dcbadge.limes.pink/api/server/xftqrvZSAw)](https://discord.gg/xftqrvZSAw)
